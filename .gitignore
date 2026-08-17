@@ -1,0 +1,23 @@
+# Maven build output
+/backend/target/
+/target/
+
+# IDE / Editor config
+.idea/
+*.iml
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# OS specific files
+Thumbs.db
+db.properties
+.DS_Store
+
+# Log files
+*.log
