@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Fashion | Checkout</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">E-FASHION</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto align-items-lg-center" id="nav-auth-section">
+                    <!-- Loaded dynamically via app.js -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Main Container -->
+    <main class="container my-5">
+        <div id="checkout-form-section" class="row">
+            <div class="col-lg-7 mb-4">
+                <div class="card border-0 shadow-sm p-4">
+                    <h4 class="fw-bold mb-4">Shipping Information</h4>
+                    <form id="checkout-form">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="shippingAddress" class="form-label">Delivery Address</label>
+                            <textarea class="form-control" id="shippingAddress" rows="4" placeholder="Street Address, City, State, ZIP Code" required></textarea>
+                            <div class="form-text">Ensure your address is complete for successful simulated delivery.</div>
+                        </div>
+                        <div class="alert alert-info mt-4">
+                            <i class="bi bi-info-circle-fill me-2"></i> Payment processing is out of scope for this student project. No payment details are required.
+                        </div>
+                        <button type="submit" class="btn btn-efashion btn-lg w-100 py-3 mt-3" id="place-order-btn">Place Order</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Summary Column -->
+            <div class="col-lg-5">
+                <div class="card border-0 shadow-sm p-4 bg-light">
+                    <h4 class="fw-bold mb-4">Order Items</h4>
+                    <div id="order-summary-items" class="mb-4">
+                        <!-- Loaded dynamically -->
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">$0.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Shipping</span>
+                        <span class="text-success">Free</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold fs-5">
+                        <span>Grand Total</span>
+                        <span id="summary-total">$0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Section (Initially Hidden) -->
+        <div id="checkout-success-section" class="text-center py-5 d-none">
+            <div class="card border-0 shadow-sm p-5 max-w-600 mx-auto">
+                <i class="bi bi-check-circle-fill text-success" style="font-size: 4.5rem;"></i>
+                <h2 class="fw-bold mt-4">Order Placed Successfully!</h2>
+                <p class="text-muted fs-5 mt-2">Thank you for shopping with E-Fashion. Your order has been recorded in the database.</p>
+                <div class="alert alert-secondary my-4 py-3">
+                    <span class="d-block text-uppercase tracking-wider fs-7 text-muted">Simulated Order Reference</span>
+                    <strong class="fs-4 text-dark" id="success-order-id">#00000</strong>
+                </div>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="products.html" class="btn btn-efashion px-4">Continue Shopping</a>
+                    <a href="index.html" class="btn btn-outline-efashion px-4">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>E-FASHION</h5>
+                    <p>Your ultimate destination for modern, clean, and elegant student-developed e-commerce design. Bridging HTML/CSS and Spring Boot.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Support</h5>
+                    <p>Email: info@efashion.com<br>Phone: +1 555 901-234</p>
+                </div>
+            </div>
+            <div class="row footer-bottom text-center">
+                <div class="col-12">
+                    <p>&copy; 2026 E-Fashion Website. Created for academic demonstration.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+    <script>
+        let cartItems = [];
+
+        async function initCheckout() {
+            const user = getLoggedInUser();
+            if (!user) {
+                alert("Please login to proceed to checkout.");
+                window.location.href = 'login.html';
+                return;
+            }
+
+            document.getElementById('fullName').value = user.name;
+
+            try {
+                const response = await fetch(`${API_BASE}/cart/${user.id}`);
+                if (response.ok) {
+                    cartItems = await response.json();
+                    if (cartItems.length === 0) {
+                        alert("Your cart is empty. Add products before checking out.");
+                        window.location.href = 'products.html';
+                        return;
+                    }
+                    renderCheckoutSummary();
+                } else {
+                    alert("Error loading order items.");
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Could not connect to backend server.");
+            }
+        }
+
+        function renderCheckoutSummary() {
+            const itemsContainer = document.getElementById('order-summary-items');
+            const subtotalSpan = document.getElementById('summary-subtotal');
+            const totalSpan = document.getElementById('summary-total');
+
+            itemsContainer.innerHTML = '';
+            let subtotal = 0;
+
+            cartItems.forEach(item => {
+                const product = item.product;
+                const itemTotal = product.price * item.quantity;
+                subtotal += itemTotal;
+
+                itemsContainer.innerHTML += `
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <span class="fw-medium">${product.name}</span>
+                            <small class="text-muted d-block">Qty: ${item.quantity} x $${product.price.toFixed(2)}</small>
+                        </div>
+                        <span class="fw-semibold">$${itemTotal.toFixed(2)}</span>
+                    </div>
+                `;
+            });
+
+            subtotalSpan.innerText = `$${subtotal.toFixed(2)}`;
+            totalSpan.innerText = `$${subtotal.toFixed(2)}`;
+        }
+
+        document.getElementById('checkout-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const user = getLoggedInUser();
+            const shippingAddress = document.getElementById('shippingAddress').value;
+
+            const placeBtn = document.getElementById('place-order-btn');
+            placeBtn.disabled = true;
+            placeBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Placing Order...`;
+
+            try {
+                const response = await fetch(`${API_BASE}/orders/place/${user.id}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ shippingAddress })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Update UI state
+                    document.getElementById('checkout-form-section').classList.add('d-none');
+                    document.getElementById('checkout-success-section').classList.remove('d-none');
+                    document.getElementById('success-order-id').innerText = `#EF-${data.id}`;
+                    
+                    // Clear cart badge
+                    updateCartBadge(user.id);
+                } else {
+                    alert(data.error || "Order placement failed.");
+                    placeBtn.disabled = false;
+                    placeBtn.innerText = "Place Order";
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Connection error while placing order.");
+                placeBtn.disabled = false;
+                placeBtn.innerText = "Place Order";
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', initCheckout);
+    </script>
+</body>
+</html>

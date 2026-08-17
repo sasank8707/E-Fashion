@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Fashion | Modern E-Commerce</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">E-FASHION</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto align-items-lg-center" id="nav-auth-section">
+                    <!-- Loaded dynamically via app.js -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <span class="text-uppercase tracking-wider text-muted mb-2 d-inline-block">New Season Arrivals</span>
+                    <h1 class="hero-title">Elevate Your Daily Style</h1>
+                    <p class="hero-subtitle">Discover premium cotton apparel, designer footwear, and minimalist accessories curated specifically for your modern wardrobe.</p>
+                    <a href="products.html" class="btn btn-efashion btn-lg px-4 py-2">Shop The Collection</a>
+                </div>
+                <div class="col-md-6 d-none d-md-block text-end">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&auto=format&fit=crop&q=80" alt="Fashion Banner" class="img-fluid rounded shadow-sm" style="max-height: 400px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="container mb-5">
+        <div class="section-header">
+            <h2 class="section-title">Shop by Category</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <a href="products.html?category=1" class="text-decoration-none">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&auto=format&fit=crop&q=60" class="card-img" alt="T-Shirts">
+                        <div class="category-overlay">
+                            <h5 class="category-name">T-Shirts</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="products.html?category=2" class="text-decoration-none">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&auto=format&fit=crop&q=60" class="card-img" alt="Jeans">
+                        <div class="category-overlay">
+                            <h5 class="category-name">Jeans</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="products.html?category=4" class="text-decoration-none">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500&auto=format&fit=crop&q=60" class="card-img" alt="Dresses">
+                        <div class="category-overlay">
+                            <h5 class="category-name">Dresses</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="container mb-5">
+        <div class="section-header">
+            <h2 class="section-title">Featured Products</h2>
+        </div>
+        <div class="row" id="featured-products-container">
+            <!-- Loaded dynamically via API -->
+            <div class="col-12 text-center py-4">
+                <div class="spinner-border text-dark" role="status"></div>
+                <p class="mt-2">Loading products...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>E-FASHION</h5>
+                    <p>Your ultimate destination for modern, clean, and elegant student-developed e-commerce design. Bridging HTML/CSS and Spring Boot.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Support</h5>
+                    <p>Email: info@efashion.com<br>Phone: +1 555 901-234</p>
+                </div>
+            </div>
+            <div class="row footer-bottom text-center">
+                <div class="col-12">
+                    <p>&copy; 2026 E-Fashion Website. Created for academic demonstration.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+    <script>
+        // Fetch and show first 4 products as featured products
+        async function loadFeaturedProducts() {
+            try {
+                const response = await fetch(`${API_BASE}/products`);
+                if (response.ok) {
+                    const products = await response.json();
+                    const container = document.getElementById('featured-products-container');
+                    container.innerHTML = '';
+                    
+                    // Slice first 4
+                    const featured = products.slice(0, 4);
+                    if (featured.length === 0) {
+                        container.innerHTML = `<div class="col-12 text-center text-muted">No products found. Run database/schema.sql to seed products.</div>`;
+                        return;
+                    }
+                    
+                    featured.forEach(product => {
+                        const productCard = `
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                                <div class="product-card">
+                                    <div class="product-img-wrapper">
+                                        <a href="product-details.html?id=${product.id}">
+                                            <img src="${product.imageUrl || 'https://via.placeholder.com/300'}" alt="${product.name}">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <span class="product-cat">${product.category ? product.category.name : 'Uncategorized'}</span>
+                                        <h5 class="product-title">${product.name}</h5>
+                                        <div class="product-price">$${product.price.toFixed(2)}</div>
+                                        <div class="d-flex gap-2">
+                                            <a href="product-details.html?id=${product.id}" class="btn btn-outline-efashion btn-sm flex-grow-1">Details</a>
+                                            <button onclick="addToCart(${product.id}, 1)" class="btn btn-efashion btn-sm flex-grow-1"><i class="bi bi-cart"></i> Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        container.innerHTML += productCard;
+                    });
+                }
+            } catch (err) {
+                console.error("Error loading featured products:", err);
+                document.getElementById('featured-products-container').innerHTML = `
+                    <div class="col-12 text-center text-danger">
+                        <i class="bi bi-exclamation-triangle-fill fs-2"></i>
+                        <p class="mt-2">Could not connect to the backend API. Please make sure the Spring Boot server is running on port 8080.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', loadFeaturedProducts);
+    </script>
+</body>
+</html>
