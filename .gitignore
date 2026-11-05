@@ -1,10 +1,37 @@
-# Maven build output
+# Maven & Java build output
 /backend/target/
 /target/
+build/
+dist/
+out/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
 
-# IDE / Editor config
+# Node / Frontend dependencies & caches
+node_modules/
+.npm/
+.cache/
+.parcel-cache/
+
+# Environment & sensitive credentials
+.env
+.env.*
+!.env.example
+application-local.properties
+db.properties
+*.pem
+*.key
+
+# IDE & Editor configurations
 .idea/
 *.iml
+*.iws
+*.ipr
 .vscode/
 *.sublime-project
 *.sublime-workspace
@@ -13,11 +40,19 @@
 .classpath
 .project
 .settings/
+.factorypath
 
-# OS specific files
-Thumbs.db
-db.properties
-.DS_Store
-
-# Log files
+# Log & temporary files
 *.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
